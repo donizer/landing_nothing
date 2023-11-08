@@ -30,7 +30,7 @@ function App() {
       <GridContainer>
         <img
           className="col-span-full h-[200px] w-full object-cover object-bottom md:h-[400px] xl:h-[460px]"
-          src="../images/background-macro.png"
+          src="./images/background-macro.png"
           alt=""
         />
       </GridContainer>
