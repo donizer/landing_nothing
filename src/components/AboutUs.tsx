@@ -5,7 +5,7 @@ export const AboutUs = () => {
         About us
       </h2>
 
-      <p className="font-space-mono col-span-2 col-start-2 leading-[140%] md:col-start-5 md:col-span-3 xl:col-start-7 xl:col-span-6">
+      <p className="font-space-mono col-span-2 col-start-2 leading-[140%] md:col-start-5 md:col-span-3 xl:col-start-8 xl:col-span-6">
         We’re a London-based tech company on a mission to remove barriers
         between people and technology.
         <br />
