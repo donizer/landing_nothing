@@ -12,7 +12,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-2">
         <img
           className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="../public/images/phone.png"
+          src="images/phone.png"
           alt="phone image"
         />
 
@@ -42,7 +42,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-6">
         <img
           className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="../public/images/ear-buds-case.png"
+          src="images/ear-buds-case.png"
           alt="phone image"
         />
 
@@ -69,7 +69,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-10">
         <img
           className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="../public/images/ear-buds-stick.png"
+          src="images/ear-buds-stick.png"
           alt="phone image"
         />
 

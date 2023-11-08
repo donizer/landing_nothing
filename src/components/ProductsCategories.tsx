@@ -13,12 +13,12 @@ export const ProductsCategories = () => {
       <CategoryItem title="All products">
         <img
           className="h-[130px] w-full rounded object-cover md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
-          src="../public/images/parrots.png"
+          src="images/parrots.png"
           alt="123"
         />
         <img
           className="h-[130px] w-full rounded object-cover md:h-[184px] md:object-top xl:h-[324px]"
-          src="../public/images/ear-buds-case-hand.png"
+          src="images/ear-buds-case-hand.png"
           alt="123"
         />
       </CategoryItem>
@@ -28,12 +28,12 @@ export const ProductsCategories = () => {
       <CategoryItem title="Audio">
         <img
           className="h-[130px] w-full rounded bg-[#E5E6E8] object-cover md:h-[184px] xl:h-[324px]"
-          src="../public/images/ear-bud.png"
+          src="images/ear-bud.png"
           alt="123"
         />
         <img
           className="h-[130px] w-full rounded object-cover md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
-          src="../public/images/ear-buds-hand.png"
+          src="images/ear-buds-hand.png"
           alt="123"
         />
       </CategoryItem>
@@ -43,12 +43,12 @@ export const ProductsCategories = () => {
       <CategoryItem title="Accessories">
         <img
           className="h-[130px] w-full rounded object-cover md:col-span-2 md:h-[184px] md:object-center xl:h-[324px]"
-          src="../public/images/phone-on-table.png"
+          src="images/phone-on-table.png"
           alt="123"
         />
         <img
           className="h-[130px] w-full rounded bg-[#E5E6E8] object-cover md:h-[184px] xl:h-[324px]"
-          src="../public/images/charger.png"
+          src="images/charger.png"
           alt="123"
         />
       </CategoryItem>
