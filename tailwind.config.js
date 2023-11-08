@@ -15,7 +15,7 @@ export default {
         'space-mono': ['Space Mono', 'Arial', 'sans-serif'],
       },
       backgroundImage: {
-        'lady-with-phone': 'url(/images/lady-with-phone.png)',
+        'lady-with-phone': 'url(images/lady-with-phone.png)',
       },
       gridTemplateColumns: {
         mobile: '0 repeat(2, 1fr) 0',
