@@ -3,18 +3,20 @@ export const Recommended = () => {
     <>
       <hr className="col-span-full mb-[64px] border-0 md:mb-[120px]" />
 
-      <h2 className="font-space-grotesk text-dark-grey col-span-2 col-start-2 text-[32px] font-bold ">
+      <h2 className="col-span-2 col-start-2 font-space-grotesk text-[32px] font-bold text-dark-grey ">
         Recommended
       </h2>
 
       <hr className="col-span-full mb-[64px] border-0 md:mb-[56px]" />
 
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-2">
-        <img
-          className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="images/phone.png"
-          alt="phone image"
-        />
+        <a href="#">
+          <img
+            className="h-[280px] w-full rounded object-cover object-top transition-all hover:scale-105 md:h-[600px] xl:h-[324px]"
+            src="images/phone.png"
+            alt="phone image"
+          />
+        </a>
 
         <hr className="my-[12px] border-0" />
 
@@ -40,11 +42,13 @@ export const Recommended = () => {
       <hr className="col-span-full mb-[64px] border-0 md:mb-[56px] xl:hidden" />
 
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-6">
-        <img
-          className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="images/ear-buds-case.png"
-          alt="phone image"
-        />
+        <a href="#">
+          <img
+            className="h-[280px] w-full rounded object-cover object-top transition-all hover:scale-105 md:h-[600px] xl:h-[324px]"
+            src="images/ear-buds-case.png"
+            alt="phone image"
+          />
+        </a>
 
         <hr className="my-[12px] border-0" />
 
@@ -67,11 +71,13 @@ export const Recommended = () => {
       <hr className="col-span-full mb-[64px] border-0 md:mb-[56px] xl:hidden" />
 
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-10">
-        <img
-          className="h-[280px] w-full rounded object-cover object-top md:h-[600px] xl:h-[324px]"
-          src="images/ear-buds-stick.png"
-          alt="phone image"
-        />
+        <a href="#">
+          <img
+            className=" h-[280px] w-full rounded object-cover object-top transition-all hover:scale-105 md:h-[600px] xl:h-[324px]"
+            src="images/ear-buds-stick.png"
+            alt="phone image"
+          />
+        </a>
 
         <hr className="my-[12px] border-0" />
 

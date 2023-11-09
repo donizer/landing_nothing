@@ -86,13 +86,13 @@ export const Footer = () => {
 
   return (
     <>
-      <h2 className="font-space-grotesk text-dark-grey col-span-2 col-start-2 text-[32px] font-bold xl:col-span-5 xl:col-start-2">
+      <h2 className="col-span-2 col-start-2 font-space-grotesk text-[32px] font-bold text-dark-grey xl:col-span-5 xl:col-start-2">
         Contact us
       </h2>
 
       <hr className="col-span-full mb-[48px] border-0 md:mb-[56px]" />
 
-      <form className="font-space-mono col-span-2 col-start-2 text-[#7E7E83] md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-2">
+      <form className="col-span-2 col-start-2 font-space-mono text-[#7E7E83] md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-2">
         <input
           className={classNames(
             'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
@@ -135,15 +135,15 @@ export const Footer = () => {
 
       <hr className="col-span-full mb-[48px] border-0 md:mb-[80px] xl:hidden" />
 
-      <div className="font-space-mono col-span-2 col-start-2 text-[#191919] md:col-span-6 md:col-start-2 xl:col-span-6 xl:col-start-8 xl:row-start-3">
-        <p className="font-space-grotesk mb-[8px] text-[14px] leading-[140%] text-[#9393A3]">
+      <div className="col-span-2 col-start-2 font-space-mono text-[#191919] md:col-span-6 md:col-start-2 xl:col-span-6 xl:col-start-8 xl:row-start-3">
+        <p className="mb-[8px] font-space-grotesk text-[14px] leading-[140%] text-[#9393A3]">
           Phone
         </p>
         <StylishLink href="tel:+123455555555">+1 234 5555-55-55</StylishLink>
 
         <hr className="mb-[24px] border-0" />
 
-        <p className="font-space-grotesk mb-[8px] text-[14px] leading-[140%] text-[#9393A3]">
+        <p className="mb-[8px] font-space-grotesk text-[14px] leading-[140%] text-[#9393A3]">
           Email
         </p>
         <StylishLink href="mailto:hello@nothing.com">
@@ -152,10 +152,10 @@ export const Footer = () => {
 
         <hr className="mb-[24px] border-0" />
 
-        <p className="font-space-grotesk mb-[8px] text-[14px] leading-[140%] text-[#9393A3]">
+        <p className="mb-[8px] font-space-grotesk text-[14px] leading-[140%] text-[#9393A3]">
           Address
         </p>
-        <StylishLink href="https://maps.app.goo.gl/f2RXypRqWkqCduWv9">
+        <StylishLink newTab href="https://maps.app.goo.gl/f2RXypRqWkqCduWv9">
           400 first ave.
           <br />
           suite 700

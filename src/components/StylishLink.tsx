@@ -3,6 +3,7 @@ type Props = {
   href?: string;
   newTab?: boolean;
   uppercase?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 };
 
 export const StylishLink: React.FC<Props> = ({
@@ -10,10 +11,12 @@ export const StylishLink: React.FC<Props> = ({
   href,
   newTab,
   uppercase,
+  onClick
 }) => {
   return (
-    <div className="font-space-grotesk group relative w-fit">
+    <div className="group relative w-fit font-space-grotesk">
       <a
+        onClick={onClick}
         className={`relative z-10 leading-[140%] transition-all group-hover:text-white ${
           uppercase ? 'uppercase' : ''
         }`}

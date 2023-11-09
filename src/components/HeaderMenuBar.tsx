@@ -9,9 +9,10 @@ import { appContext } from '../Contexts/appContext';
 type Props = {
   phone?: boolean;
   close?: boolean;
+  sticky?: boolean;
 };
 
-export const HeaderMenuBar: React.FC<Props> = ({ phone, close }) => {
+export const HeaderMenuBar: React.FC<Props> = ({ phone, close, sticky }) => {
   const { toggleMenu } = useContext(appContext);
 
   const onMouseEnter = useCallback(
@@ -33,7 +34,11 @@ export const HeaderMenuBar: React.FC<Props> = ({ phone, close }) => {
   );
 
   return (
-    <div className="flex h-[72px] items-center justify-between md:h-[96px] ">
+    <div
+      className={`flex h-[72px] items-center justify-between md:h-[96px] ${
+        sticky ? 'sticky top-0 bg-[#e5e5e5]' : ' '
+      }`}
+    >
       <img
         className="h-[16px] w-[125px] object-cover md:h-[24px] md:w-[172px]"
         src={logo}
