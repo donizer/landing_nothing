@@ -18,9 +18,14 @@ export default {
         'lady-with-phone': 'url(/images/lady-with-phone.png)',
       },
       gridTemplateColumns: {
-        mobile: '0 repeat(2, 1fr) 0',
-        tablet: 'minmax(48px, auto) repeat(6, minmax(80px, 1fr)) minmax(48px, auto)',
+        mobile: '0 repeat(2, minmax(0, 1fr)) 0',
+        tablet:
+          'minmax(48px, auto) repeat(6, minmax(80px, 1fr)) minmax(48px, auto)',
         desktop: 'minmax(96px, auto) repeat(12, 63px) minmax(96px, auto)',
+      },
+      height: {
+        'square1/2': 'calc((100dvw / 2) - 60px)',
+        square: 'calc(100dvw - 40px)',
       },
     },
   },

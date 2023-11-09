@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.svg';
 import phoneIco from '../assets/Icon-Phone-call.svg';
 import burger from '../assets/Icon-Burger-menu.svg';
 import burgerHover from '../assets/Icon-Burger-menu-hover.svg';
@@ -40,7 +40,7 @@ export const HeaderMenuBar: React.FC<Props> = ({ phone, close, sticky }) => {
       }`}
     >
       <img
-        className="h-[16px] w-[125px] object-cover md:h-[24px] md:w-[172px]"
+        className="h-[16px] w-[125px] md:h-[24px] md:w-[172px]"
         src={logo}
         alt=""
       />

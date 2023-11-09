@@ -12,15 +12,19 @@ export const Footer = () => {
     message: '',
   });
 
-  const [errors, setErrors] = useState({
+  const [hasErrors, setHasErrors] = useState({
     name: false,
     email: false,
   });
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    if (!formValues.name.trim()) {
-      e.preventDefault();
-      setErrors(prev => {
+    e.preventDefault();
+
+    const isNameIncorrect = !formValues.name.trim()
+    const isEmailIncorrect = !emailRegEx.test(formValues.email)
+
+    if (isNameIncorrect) {
+      setHasErrors(prev => {
         return {
           ...prev,
           name: true,
@@ -28,15 +32,24 @@ export const Footer = () => {
       });
     }
 
-    if (!emailRegEx.test(formValues.email)) {
-      e.preventDefault();
-      setErrors(prev => {
+    if (isEmailIncorrect) {
+      setHasErrors(prev => {
         return {
           ...prev,
           email: true,
         };
       });
     }
+
+    if (!formValues.name.trim() || !emailRegEx.test(formValues.email)) {
+      return;
+    }
+
+    setFormValues({
+      name: '',
+      email: '',
+      message: '',
+    });
   };
 
   const handleNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,8 +60,8 @@ export const Footer = () => {
       };
     });
 
-    if (errors.name) {
-      setErrors(prev => {
+    if (hasErrors.name) {
+      setHasErrors(prev => {
         return {
           ...prev,
           name: false,
@@ -65,8 +78,8 @@ export const Footer = () => {
       };
     });
 
-    if (errors.email) {
-      setErrors(prev => {
+    if (hasErrors.email) {
+      setHasErrors(prev => {
         return {
           ...prev,
           email: false,
@@ -93,37 +106,64 @@ export const Footer = () => {
       <hr className="col-span-full mb-[48px] border-0 md:mb-[56px]" />
 
       <form className="col-span-2 col-start-2 font-space-mono text-[#7E7E83] md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-2">
-        <input
-          className={classNames(
-            'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
-            {
-              'border-red-500': errors.name,
-              'hover:border-red-500': errors.name,
-              'focus:border-red-500': errors.name,
-            },
-          )}
-          type="text"
-          placeholder="Name"
-          value={formValues.name}
-          onChange={handleNameInput}
-          required
-        />
-        <input
-          className={classNames(
-            'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
-            {
-              'border-red-500': errors.email,
-              'hover:border-red-500': errors.email,
-              'focus:border-red-500': errors.email,
-            },
-          )}
-          type="email"
-          placeholder="E-mail"
-          value={formValues.email}
-          onChange={handleEmailInput}
-        />
+        <fieldset className="relative">
+          <legend
+            className={classNames(
+              'absolute left-[8px] top-[-16px] text-[12px] text-red-500',
+              {
+                hidden: !hasErrors.name,
+              },
+            )}
+          >
+            Please, enter correct name
+          </legend>
+
+          <input
+            className={classNames(
+              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
+              {
+                'border-red-500': hasErrors.name,
+                'hover:border-red-500': hasErrors.name,
+                'focus:border-red-500': hasErrors.name,
+              },
+            )}
+            type="text"
+            placeholder="Name"
+            value={formValues.name}
+            onChange={handleNameInput}
+            required
+          />
+        </fieldset>
+        <fieldset className="relative">
+          <legend
+            className={classNames(
+              'absolute left-[8px] top-[-16px] text-[12px] text-red-500',
+              {
+                hidden: !hasErrors.email,
+              },
+            )}
+          >
+            Please, enter correct e-mail
+          </legend>
+
+          <input
+            className={classNames(
+              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
+              {
+                'border-red-500': hasErrors.email,
+                'hover:border-red-500': hasErrors.email,
+                'focus:border-red-500': hasErrors.email,
+              },
+            )}
+            type="email"
+            placeholder="E-mail"
+            value={formValues.email}
+            onChange={handleEmailInput}
+          />
+        </fieldset>
+
         <textarea
-          className="mb-[32px] h-[148px] w-full resize-none rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] text-[#292929] focus:outline-none"
+          className="mb-[32px] h-[148px] w-full resize-none rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] text-[#292929] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none"
           placeholder="Message"
           value={formValues.message}
           onChange={handleMessageInput}
