@@ -49,7 +49,7 @@ export const ProductsCategories = () => {
 
         <a
           className="object-cover transition-all hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
-          href=""
+          href="#"
         >
           <img
             className="h-square1/2 w-full rounded object-cover md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
