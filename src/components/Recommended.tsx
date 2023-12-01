@@ -12,7 +12,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-2">
         <a href="#">
           <img
-            className="h-square w-full rounded object-cover object-top transition-all hover:scale-[102%] md:h-[600px] xl:h-[324px]"
+            className="h-square w-full rounded object-cover object-top transition-all duration-200 hover:scale-[102%] md:h-[600px] xl:h-[324px]"
             src="images/phone.png"
             alt="phone image"
           />
@@ -44,7 +44,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-6">
         <a href="#">
           <img
-            className="h-square w-full rounded object-cover object-top transition-all hover:scale-[102%] md:h-[600px] xl:h-[324px]"
+            className="h-square w-full rounded object-cover object-top transition-all duration-200 hover:scale-[102%] md:h-[600px] xl:h-[324px]"
             src="images/ear-buds-case.png"
             alt="phone image"
           />
@@ -73,7 +73,7 @@ export const Recommended = () => {
       <div className="col-span-2 col-start-2 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-10">
         <a href="#">
           <img
-            className=" h-square w-full rounded object-cover object-top transition-all hover:scale-[102%] md:h-[600px] xl:h-[324px]"
+            className=" h-square w-full rounded object-cover object-top transition-all duration-200 hover:scale-[102%] md:h-[600px] xl:h-[324px]"
             src="images/ear-buds-stick.png"
             alt="phone image"
           />

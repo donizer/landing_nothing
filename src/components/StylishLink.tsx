@@ -17,7 +17,7 @@ export const StylishLink: React.FC<Props> = ({
     <div className="group relative w-fit font-space-grotesk">
       <a
         onClick={onClick}
-        className={`relative z-10 leading-[140%] transition-all group-hover:text-white ${
+        className={`relative z-10 leading-[140%] transition-all duration-200 group-hover:text-white ${
           uppercase ? 'uppercase' : ''
         }`}
         href={href}
@@ -25,7 +25,7 @@ export const StylishLink: React.FC<Props> = ({
       >
         {children}
       </a>
-      <div className="absolute bottom-0 h-px w-full bg-black transition-all group-hover:h-[100%]" />
+      <div className="absolute bottom-0 h-px w-full bg-black transition-all duration-200 group-hover:h-[100%]" />
     </div>
   );
 };

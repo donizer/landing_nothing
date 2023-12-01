@@ -12,7 +12,7 @@ export const ProductsCategories = () => {
 
       <CategoryItem title="All products">
         <a
-          className="object-cover transition-all hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img
@@ -22,7 +22,7 @@ export const ProductsCategories = () => {
           />
         </a>
         <a
-          className="object-cover transition-all hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img
@@ -37,7 +37,7 @@ export const ProductsCategories = () => {
 
       <CategoryItem title="Audio">
         <a
-          className="object-cover transition-all hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img
@@ -48,7 +48,7 @@ export const ProductsCategories = () => {
         </a>
 
         <a
-          className="object-cover transition-all hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img
@@ -63,7 +63,7 @@ export const ProductsCategories = () => {
 
       <CategoryItem title="Accessories">
         <a
-          className="object-cover transition-all hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:col-span-2 md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img
@@ -73,7 +73,7 @@ export const ProductsCategories = () => {
           />
         </a>
         <a
-          className="object-cover transition-all hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
+          className="object-cover transition-all duration-200 hover:scale-[102%] md:h-[184px] md:object-top xl:h-[324px]"
           href="#"
         >
           <img

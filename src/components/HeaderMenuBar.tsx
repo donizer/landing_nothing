@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const HeaderMenuBar: React.FC<Props> = ({ phone, close, sticky }) => {
-  const { toggleMenu } = useContext(appContext);
+  const { toggleMenu, closeMenu } = useContext(appContext);
 
   const onMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
@@ -39,11 +39,13 @@ export const HeaderMenuBar: React.FC<Props> = ({ phone, close, sticky }) => {
         sticky ? 'sticky top-0 bg-[#e5e5e5]' : ' '
       }`}
     >
-      <img
-        className="h-[16px] w-[125px] md:h-[24px] md:w-[172px]"
-        src={logo}
-        alt=""
-      />
+      <a href="#" onClick={closeMenu}>
+        <img
+          className="h-[16px] w-[125px] md:h-[24px] md:w-[172px]"
+          src={logo}
+          alt=""
+        />
+      </a>
 
       <nav className="flex gap-x-[24px] md:gap-x-[32px]">
         {phone && (
@@ -51,7 +53,7 @@ export const HeaderMenuBar: React.FC<Props> = ({ phone, close, sticky }) => {
             href="tel:+12345555555"
             className="group relative flex h-[24px] w-[24px] md:h-[32px] md:w-[32px]"
           >
-            <div className="absolute left-[-140px] top-1 w-[140px] opacity-0 transition-all group-hover:opacity-100">
+            <div className="absolute left-[-140px] top-1 w-[140px] opacity-0 transition-all duration-200 group-hover:opacity-100">
               <p>+1 234 555-55-55</p>
             </div>
             <img className="h-full w-full" src={phoneIco} alt="" />

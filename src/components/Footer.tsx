@@ -15,13 +15,15 @@ export const Footer = () => {
   const [hasErrors, setHasErrors] = useState({
     name: false,
     email: false,
+    message: false,
   });
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
-    const isNameIncorrect = !formValues.name.trim()
-    const isEmailIncorrect = !emailRegEx.test(formValues.email)
+    const isNameIncorrect = !formValues.name.trim();
+    const isEmailIncorrect = !emailRegEx.test(formValues.email);
+    const isMessageIncorrect = !formValues.message.trim();
 
     if (isNameIncorrect) {
       setHasErrors(prev => {
@@ -41,7 +43,20 @@ export const Footer = () => {
       });
     }
 
-    if (!formValues.name.trim() || !emailRegEx.test(formValues.email)) {
+    if (isMessageIncorrect) {
+      setHasErrors(prev => {
+        return {
+          ...prev,
+          message: true,
+        };
+      });
+    }
+
+    if (
+      !formValues.name.trim() ||
+      !emailRegEx.test(formValues.email) ||
+      isMessageIncorrect
+    ) {
       return;
     }
 
@@ -95,6 +110,15 @@ export const Footer = () => {
         message: e.target.value,
       };
     });
+
+    if (hasErrors.message) {
+      setHasErrors(prev => {
+        return {
+          ...prev,
+          message: false,
+        };
+      });
+    }
   };
 
   return (
@@ -120,7 +144,7 @@ export const Footer = () => {
 
           <input
             className={classNames(
-              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
+              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all duration-200 hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
               {
                 'border-red-500': hasErrors.name,
                 'hover:border-red-500': hasErrors.name,
@@ -134,6 +158,7 @@ export const Footer = () => {
             required
           />
         </fieldset>
+
         <fieldset className="relative">
           <legend
             className={classNames(
@@ -148,7 +173,7 @@ export const Footer = () => {
 
           <input
             className={classNames(
-              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
+              'mb-[16px] w-full rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] transition-all duration-200 hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
               {
                 'border-red-500': hasErrors.email,
                 'hover:border-red-500': hasErrors.email,
@@ -162,12 +187,33 @@ export const Footer = () => {
           />
         </fieldset>
 
-        <textarea
-          className="mb-[32px] h-[148px] w-full resize-none rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] text-[#292929] transition-all hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none"
-          placeholder="Message"
-          value={formValues.message}
-          onChange={handleMessageInput}
-        />
+        <fieldset className="relative">
+          <legend
+            className={classNames(
+              'absolute left-[8px] top-[-16px] text-[12px] text-red-500',
+              {
+                hidden: !hasErrors.message,
+              },
+            )}
+          >
+            Please, enter correct message
+          </legend>
+
+          <textarea
+            className={classNames(
+              'mb-[32px] h-[148px] w-full resize-none rounded-[8px] border-2 bg-[#F8F8FA] px-[16px] py-[14px] text-[#292929] transition-all duration-200 hover:border-[#D5D7DE] hover:text-[#292929] focus:border-[#111] focus:outline-none',
+              {
+                'border-red-500': hasErrors.message,
+                'hover:border-red-500': hasErrors.message,
+                'focus:border-red-500': hasErrors.message,
+              },
+            )}
+            placeholder="Message"
+            value={formValues.message}
+            onChange={handleMessageInput}
+          />
+        </fieldset>
+
         <div className="col-span-2 col-start-2">
           <StylishButton onClick={handleSubmit}>Send</StylishButton>
         </div>

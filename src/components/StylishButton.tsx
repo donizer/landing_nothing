@@ -9,7 +9,7 @@ export const StylishButton: React.FC<Props> = ({ children, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="font-space-grotesk bg-dark-grey hover:text-dark-grey h-[56px] w-full rounded-lg border-2 border-[#F0F1F4] font-bold leading-[27px] text-white transition-all hover:bg-white active:bg-[#111] active:text-white"
+      className="font-space-grotesk bg-dark-grey hover:text-dark-grey h-[56px] w-full rounded-lg border-2 border-[#F0F1F4] font-bold leading-[27px] text-white transition-all duration-200 hover:bg-white active:bg-[#111] active:text-white"
     >
       {children}
     </button>

@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { appContext } from './appContext';
+import { DefaultValueType, appContext } from './appContext';
 
 type Props = {
   children: ReactNode;
@@ -12,6 +12,14 @@ export const AppContextProvider: React.FC<Props> = ({ children }) => {
 
   const toggleMenu = () => {
     setIsModalOpen(prev => !prev);
+  };
+
+  const closeMenu = () => {
+    if (isModalOpen) setIsModalOpen(false);
+  };
+
+  const openMenu = () => {
+    if (!isModalOpen) setIsModalOpen(true);
   };
 
   useEffect(() => {
@@ -28,10 +36,12 @@ export const AppContextProvider: React.FC<Props> = ({ children }) => {
     }
   }, [isModalOpen]);
 
-  const state = {
+  const state: DefaultValueType = {
     isModalOpen,
     setIsModalOpen,
     toggleMenu,
+    closeMenu,
+    openMenu,
   };
 
   return <appContext.Provider value={state}>{children}</appContext.Provider>;
