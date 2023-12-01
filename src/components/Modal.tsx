@@ -7,7 +7,7 @@ export const Modal = () => {
   const { isModalOpen, toggleMenu } = useContext(appContext);
   return (
     <div
-      className={`fixed z-50 h-full w-full overflow-auto bg-[#E5E6E8] px-[20px] pb-20 font-bold tracking-[2px] text-[#292929] transition-all duration-200 md:px-[72px] xl:px-[120px] ${
+      className={`fixed z-50 h-full w-full overflow-auto bg-[#E5E6E8] px-[20px] pb-20 font-bold tracking-[2px] text-[#292929] transition-all duration-200 git add .md:px-[72px] xl:px-[120px] xl:duration-300 ${
         isModalOpen ? 'left-0' : 'left-[100%]'
       }`}
     >
